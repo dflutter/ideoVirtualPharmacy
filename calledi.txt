@@ -1,0 +1,124 @@
+2017-01-06 07:42:24 Called
+2017-01-06 07:43:03 Called1
+2017-01-06 07:43:33 Called1
+2017-01-06 07:44:13 Called
+2017-01-06 07:45:31 Called
+2017-01-06 07:45:43 Called
+2017-01-06 07:46:37 Called
+2017-01-06 07:46:38 Called
+2017-01-06 07:46:39 Called
+2017-01-06 07:49:54 Called
+2017-01-06 07:53:43 Called
+2017-01-06 07:54:06 Called
+2017-01-06 07:55:50 Called
+2017-01-06 07:56:12 Called
+2017-01-06 08:01:50 Called
+2017-01-06 08:02:10 Called
+2017-01-06 08:02:30 Called
+2017-01-06 08:07:00 Called
+2017-01-06 08:07:15 Called
+2017-01-06 08:07:23 Called
+2017-01-06 08:07:35 Called
+2017-01-06 08:08:42 Called
+2017-01-06 08:08:54 Called
+2017-01-06 08:09:03 Called
+2017-01-06 08:10:33 Called
+2017-01-06 08:10:43 Called
+2017-01-06 08:10:53 Called
+2017-01-06 08:10:59 Called
+2017-01-06 08:21:01 Called
+2017-01-06 08:21:14 Called
+2017-01-06 08:23:22 Called
+2017-01-06 08:24:05 Called
+2017-01-06 08:24:44 Called
+2017-01-06 08:25:18 Called
+2017-01-06 08:25:33 Called
+2017-01-06 08:28:07 Called{"DOCUMENT_ROOT":"\/home\/jccomfor\/public_html","GATEWAY_INTERFACE":"CGI\/1.1","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"en-US,en;q=0.8","HTTP_CACHE_CONTROL":"max-age=0","HTTP_CONNECTION":"keep-alive","HTTP_HOST":"ccomfort.com","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/55.0.2883.95 Safari\/537.36","PATH":"\/bin:\/usr\/bin","PHPRC":"\/home\/jccomfor\/public_html","QUERY_STRING":"","REDIRECT_STATUS":"200","REMOTE_ADDR":"96.67.55.101","REMOTE_PORT":"22677","REQUEST_METHOD":"GET","REQUEST_URI":"\/ideo\/i.php","SCRIPT_FILENAME":"\/home\/jccomfor\/public_html\/ideo\/i.php","SCRIPT_NAME":"\/ideo\/i.php","SERVER_ADDR":"69.73.188.68","SERVER_ADMIN":"webmaster@ccomfort.com","SERVER_NAME":"ccomfort.com","SERVER_PORT":"80","SERVER_PROTOCOL":"HTTP\/1.1","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache","UNIQUE_ID":"WG@pd0VJvCcAA9o7@oQAAAAH","PHP_SELF":"\/ideo\/i.php","REQUEST_TIME":1483712887,"argv":[],"argc":0}
+2017-01-06 08:28:20 Called{"CONTENT_LENGTH":"761","CONTENT_TYPE":"application\/json; charset=UTF-8","DOCUMENT_ROOT":"\/home\/jccomfor\/public_html","GATEWAY_INTERFACE":"CGI\/1.1","HTTP_ACCEPT":"application\/json, application\/*+json","HTTP_ACCEPT_CHARSET":"big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp","HTTP_CACHE_CONTROL":"no-cache","HTTP_CONNECTION":"keep-alive","HTTP_HOST":"www.ccomfort.com","HTTP_PRAGMA":"no-cache","HTTP_USER_AGENT":"Java\/1.8.0_112","PATH":"\/bin:\/usr\/bin","PHPRC":"\/home\/jccomfor\/public_html","QUERY_STRING":"","REDIRECT_STATUS":"200","REMOTE_ADDR":"54.157.251.180","REMOTE_PORT":"43538","REQUEST_METHOD":"POST","REQUEST_URI":"\/ideo\/i.php","SCRIPT_FILENAME":"\/home\/jccomfor\/public_html\/ideo\/i.php","SCRIPT_NAME":"\/ideo\/i.php","SERVER_ADDR":"69.73.188.68","SERVER_ADMIN":"webmaster@ccomfort.com","SERVER_NAME":"www.ccomfort.com","SERVER_PORT":"80","SERVER_PROTOCOL":"HTTP\/1.1","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache","UNIQUE_ID":"WG@phEVJvCcAA8b-AwgAAAAB","PHP_SELF":"\/ideo\/i.php","REQUEST_TIME":1483712900,"argv":[],"argc":0}
+2017-01-06 08:30:10 Called{"CONTENT_LENGTH":"757","CONTENT_TYPE":"application\/json; charset=UTF-8","DOCUMENT_ROOT":"\/home\/jccomfor\/public_html","GATEWAY_INTERFACE":"CGI\/1.1","HTTP_ACCEPT":"application\/json, application\/*+json","HTTP_ACCEPT_CHARSET":"big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp","HTTP_CACHE_CONTROL":"no-cache","HTTP_CONNECTION":"keep-alive","HTTP_HOST":"www.ccomfort.com","HTTP_PRAGMA":"no-cache","HTTP_USER_AGENT":"Java\/1.8.0_112","PATH":"\/bin:\/usr\/bin","PHPRC":"\/home\/jccomfor\/public_html","QUERY_STRING":"","REDIRECT_STATUS":"200","REMOTE_ADDR":"54.157.251.180","REMOTE_PORT":"44472","REQUEST_METHOD":"POST","REQUEST_URI":"\/ideo\/i.php","SCRIPT_FILENAME":"\/home\/jccomfor\/public_html\/ideo\/i.php","SCRIPT_NAME":"\/ideo\/i.php","SERVER_ADDR":"69.73.188.68","SERVER_ADMIN":"webmaster@ccomfort.com","SERVER_NAME":"www.ccomfort.com","SERVER_PORT":"80","SERVER_PROTOCOL":"HTTP\/1.1","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache","UNIQUE_ID":"WG@p8kVJvCcAA9TdslcAAAAC","PHP_SELF":"\/ideo\/i.php","REQUEST_TIME":1483713010,"argv":[],"argc":0}
+2017-01-06 08:34:32 Called""
+2017-01-06 08:38:29 Called{"id":"62f2dae9-edc5-43c0-85c9-068100feedeb","timestamp":"2017-01-06T14:38:29.504Z","result":{"source":"agent","resolvedQuery":"what is total invenotry of aspirin?","speech":"","action":"drug-inventory","actionIncomplete":false,"parameters":{"drug":"aspirin"},"contexts":[],"metadata":{"intentId":"aa74d695-ff3b-4364-aa1a-0f650b53fed1","webhookUsed":"true","webhookForSlotFillingUsed":"false","intentName":"what is total inventory"},"fulfillment":{"speech":"There must be a problem with the connect, please try again later.","messages":[{"type":0,"speech":"There must be a problem with the connect, please try again later."}]},"score":1.0},"status":{"code":200,"errorType":"success"},"sessionId":"50127356-131f-4786-9a3e-9dbbaf7bee5c","originalRequest":null}
+2017-01-06 08:42:35 Called1
+2017-01-06 08:42:36 Called1
+2017-01-06 08:45:19 Called Drug:
+2017-01-06 08:45:32 Called Drug:stdClass Object
+(
+    [id] => 2e74d868-9f50-41f3-88c2-be9ee4527f67
+    [timestamp] => 2017-01-06T14:45:32.376Z
+    [result] => stdClass Object
+        (
+            [source] => agent
+            [resolvedQuery] => what is the inventory of aspirin?
+            [speech] => 
+            [action] => drug-inventory
+            [actionIncomplete] => 
+            [parameters] => stdClass Object
+                (
+                    [drug] => aspirin
+                )
+
+            [contexts] => Array
+                (
+                )
+
+            [metadata] => stdClass Object
+                (
+                    [intentId] => aa74d695-ff3b-4364-aa1a-0f650b53fed1
+                    [webhookUsed] => true
+                    [webhookForSlotFillingUsed] => false
+                    [intentName] => what is total inventory
+                )
+
+            [fulfillment] => stdClass Object
+                (
+                    [speech] => There must be a problem with the connect, please try again later.
+                    [messages] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [type] => 0
+                                    [speech] => There must be a problem with the connect, please try again later.
+                                )
+
+                        )
+
+                )
+
+            [score] => 0.56
+        )
+
+    [status] => stdClass Object
+        (
+            [code] => 200
+            [errorType] => success
+        )
+
+    [sessionId] => 50127356-131f-4786-9a3e-9dbbaf7bee5c
+    [originalRequest] => 
+)
+
+2017-01-06 08:47:34 Called Drug:
+2017-01-06 08:47:37 Called Drug:
+2017-01-06 08:49:35 Called Drug:
+2017-01-06 08:49:36 Called Drug:
+2017-01-06 08:49:37 Called Drug:
+2017-01-06 08:49:38 Called Drug:
+2017-01-06 08:56:26 Called Drug:aspirin
+2017-01-06 08:57:01 Called Drug:
+2017-01-06 08:57:16 Called Drug:aspirin
+2017-01-06 08:57:27 Called Drug:aspirin
+2017-01-06 08:57:36 Called Drug:cipro
+2017-01-06 08:58:16 Called Drug:botox
+2017-01-06 08:59:10 Called Drug:aspirin
+2017-01-06 09:02:05 Called Drug:
+2017-01-06 09:02:13 Called Drug:
+2017-01-06 09:02:19 Called Drug:aspirin
+2017-01-06 09:05:45 Called Drug:aspirin
+2017-01-06 09:06:59 Called Drug:
+2017-01-06 09:07:07 Called Drug:
+2017-01-06 09:07:22 Called Drug:aspirin
+2017-01-06 09:14:22 Called Drug:
+2017-01-06 09:15:31 Called Drug:
+2017-01-06 09:15:51 Called Drug:
+2017-01-06 09:15:58 Called Drug:aspirin
+2017-01-06 09:17:46 Called Drug:aspirin
