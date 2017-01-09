@@ -2,7 +2,7 @@
   
   //create a connection to the database it will use $con as the database connection variable in all of the mysqli_query calls
   require_once("sqlConnect.php");
-  
+
   
   //get the POST BODY from the call to this page
   $temp=file_get_contents('php://input');
@@ -13,7 +13,7 @@
   "result": {
     "source": "agent",
     "resolvedQuery": "i used 2 doses of aspirin",
-    "action": "used-inventory",
+    "action": "whats-missing",
     "actionIncomplete": false,
     "parameters": {
       "drug": "aspirin",
@@ -91,7 +91,8 @@
 	  
 	  $d['speech']="The following $drug inventory is available.\r\n\r\n";
 	  if(mysqli_num_rows($data)==0) {
-		 $d['speech']="There is no stock available of $drug. You should order more.";
+		 $d['speech']="There is no stock available of $drug. Should I order more?";
+		 $d['contextOut']=array(array("name"=>"no-stock", "lifespan" =>"1", "parameters" =>array("drug"=>"$drug")));
 	  } else {
 		  while($info=mysqli_fetch_array($data,MYSQL_ASSOC)) {
 			  if($info['doses']==1)
@@ -136,7 +137,8 @@
 		   
 	 	$d['speech']="Please pull $doses $doseText of $drug from location $location which $expire.";
      } else {
-	    $d['speech']="There are insufficient doses of $drug in a single location to fill this request. You should order more.";
+	    $d['speech']="There are insufficient doses of $drug in a single location to fill this request. Should I order more?";
+	    $d['contextOut']=array(array("name"=>"no-stock", "lifespan" =>"1", "parameters" =>array("drug"=>"$drug")));
      }
 
       return $d;
@@ -144,7 +146,7 @@
   
   
   function useInventory() {
-	  global $con,$drug,$doses;
+	  global $con,$drug,$doses,$override;
 	  
 	  //get best location
 	  $location=doseLocation();
@@ -160,10 +162,17 @@
 	  $drugInUsed=strtolower($s['drug']);
 	  
 	  if($drug<>$drugInUsed) {
-		  $d['speech']="You have taken $drugInUsed from location $usedLocation but you needed $drug in location $location.  Please return $drugInUsed to location $usedLocation and get $drug from location $location.";
+		  $d['speech']="You have taken $drugInUsed from location $usedLocation but you needed $drug in location $location.  Please return $drugInUsed to location $usedLocation and get $drug from location $location. Fixed It?";
+		  $d['contextOut']=array(array("name"=>"location-swap", "lifespan" =>"1", "parameters" =>array("drug"=>"$drug","doses"=>"$doses")));
 	  } elseif($location<>$usedLocation) {
 		  $d['speech']="You have taken $drug from location $usedLocation which was not optimal, please return and take $drug from location $location.";
-	  }elseif($location==$usedLocation AND $drug==$drugInUsed) {
+		   $d['contextOut']=array(array("name"=>"not-optimal", "lifespan" =>"1", "parameters" =>array("drug"=>"$drug","doses"=>"$doses","location"=>"$usedLocation")));
+	  }elseif($location<>$usedLocation AND $override) {
+	       $d['speech']="Though not optimal, $doses $drugInUsed have been removed from location $location. Inventory has been adjusted.";
+		  mysqli_query($con,"UPDATE inventory set doses=(`doses`-$doses) where lower(drug) LIKE '%".strtolower($drugInUsed)."%' AND location='$usedLocation'");
+		  //remove any drugs that have zero inventory
+		  mysqli_query($con,"DELETE from inventory where doses<=0");
+	  } elseif($location==$usedLocation AND $drug==$drugInUsed) {
 		  $d['speech']="Great Job, $doses $drugInUsed have been removed from location $location. Inventory has been adjusted.";
 		  mysqli_query($con,"UPDATE inventory set doses=(`doses`-$doses) where lower(drug) LIKE '%".strtolower($drugInUsed)."%' AND location='$location'");
 		  //remove any drugs that have zero inventory
@@ -216,19 +225,77 @@
 	  
 	  return $d;
 	} //end function
+	
+	
+	function resetInventory() {
+	  global $con;	
+	  $d['speech']="For testing purposes the inventory has been reset. Please request an update on the total inventory and reset bottles as described.";
+	  mysqli_query($con,"DELETE from inventory where 1");
+	  $date1=date('Y-m-d',strtotime("+1 day"));
+	  $date2=date('Y-m-d',strtotime("+2 days"));
+	  $date3=date('Y-m-d',strtotime("+3 days"));
+	  mysqli_query($con,"INSERT INTO inventory (drug,doses,eDate,location) VALUES ('aspirin','100','$date1','1')");
+	  mysqli_query($con,"INSERT INTO inventory (drug,doses,eDate,location) VALUES ('cipro','10','$date2','2')");
+	  mysqli_query($con,"INSERT INTO inventory (drug,doses,eDate,location) VALUES ('arv','1','$date3','3')");	  
+	  mysqli_query($con,"UPDATE location set loc1='COVERED',loc2='COVERED',loc3='COVERED' where 1");
+	  mysqli_query($con,"UPDATE currentLocation set location='1',status='COVERED' where 1");
+	  
+	  return $d;
+	}//end function
+	
+	function missing() {
+		global $con;
+		//this returns if a location is OPEN and an item in inventory exists for that location it will reply with what's missing
+		$data=mysqli_query($con,"SELECT * from location");
+		$loc=mysqli_fetch_array($data,MYSQL_ASSOC);
+		if($loc['loc1']=="OPEN")
+		  $l[]=1;
+		if($loc['loc2']=="OPEN")
+		  $l[]=2;
+		if($loc['loc3']=="OPEN")
+		  $l[]=3;
+		  
+
+		if(count($l)==0)
+		  $d['speech']="All locations contain medication, there is nothing missing.";
+		else {
+			foreach($l as $location) {
+
+				$data=mysqli_query($con,"SELECT * FROM inventory where doses>0 and location='$location'");
+				if(mysqli_num_rows($data)>0) {
+					$s=mysqli_fetch_array($data);
+					$d['speech'].=$s['drug']." is missing from location ".$location.". Please find and return it.";
+				} else {
+					$d['speech'].="Location $location is open and no medication is currently expected to be stored there.";
+				}
+			}
+		}
+      return $d;
+	}
   	   
   if($action=="total-inventory" OR $action=="drug-inventory") {
 	  $d=inventory();
   }elseif($action=="need-inventory") {
 	  $d=needInventory();
-  }elseif($action=="used-inventory") {
+  }elseif($action=="used-inventory" OR $action=="use-inventory-override") {
+	  if($action=="use-inventory-override") 
+	     $override=true;
+	  else
+	     $override=false;
       $d=useInventory();
   }elseif($action=="order-inventory") {
 	  $d=orderInventory();
+  }elseif($action=="reset-inventory") {
+	  $d=resetInventory();
+  }elseif($action="whats-missing"){
+	  $d=missing();
   }
   
   
+  
+  
   $d['displayText']=$d['speech'];
+  
   $d['speech']=str_replace("\r\n","",$d['speech']);
   $final=stripslashes(json_encode($d));
 
